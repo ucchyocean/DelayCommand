@@ -1,0 +1,20 @@
+name: ${project.name}
+version: ${project.version}
+main: org.bitbucket.ucchy.delay.DelayCommandPlugin
+description: Delay Command Plugin
+author: ucchy
+
+commands:
+  delaycommand:
+    description: Delay Command
+    aliases: [delay]
+    usage: |
+           /<command> (ticks) (command...) - run command after ticks.
+           /<command> async (ticks) (commmand...) -run async command after ticks.
+    permission: delaycommand.command
+    permission-message: 'You don''t have permission "<permission>".'
+
+permissions:
+  delaycommand.command:
+    description: Allows to use command.
+    default: op
